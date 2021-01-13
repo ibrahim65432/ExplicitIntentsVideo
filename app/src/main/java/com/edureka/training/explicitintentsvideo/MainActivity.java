@@ -1,5 +1,6 @@
 package com.edureka.training.explicitintentsvideo;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,11 +13,15 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText etName;
     Button btnAct2, btnAct3;
     TextView tvResults;
+
+    final int ACTIVITY3 = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String name = etName.getText().toString().trim();
 
-                    Intent intent = new Intent(MainActivity.this, com.edureka.training.explicitintentsvideo.Activity2.class);
+                    Intent intent = new Intent(MainActivity.this,
+                            com.edureka.training.explicitintentsvideo.Activity2.class);
                     intent.putExtra("name", name);
                     startActivity(intent);
                 }
@@ -47,8 +53,22 @@ public class MainActivity extends AppCompatActivity {
         btnAct3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this,
+                        com.edureka.training.explicitintentsvideo.Activity3.class);
+                startActivityForResult(intent,ACTIVITY3);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == ACTIVITY3){
+            tvResults.setText(Objects.requireNonNull(data).getStringExtra("surname"));
+        }
+        if(resultCode == RESULT_CANCELED){
+            tvResults.setText(R.string.no_data_received);
+        }
     }
 }

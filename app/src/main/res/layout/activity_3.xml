@@ -12,7 +12,7 @@
     tools:context=".Activity3">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etSurname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -24,7 +24,7 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -32,5 +32,14 @@
         android:layout_marginRight="20dp"
         android:gravity="center_horizontal"
         android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/cancel" />
 
 </LinearLayout>

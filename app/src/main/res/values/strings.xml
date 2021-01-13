@@ -7,4 +7,6 @@
     <string name="welcome_to_activity_2">Welcome to Activity 2</string>
     <string name="please_enter_your_surname">please enter your surname</string>
     <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_data_received">No data received</string>
 </resources>
