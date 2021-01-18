@@ -14,7 +14,7 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
-        tvWelcome.findViewById(R.id.tvWelcome);
+        tvWelcome = findViewById(R.id.tvWelcome);
 
         String name = getIntent().getStringExtra("name");
 

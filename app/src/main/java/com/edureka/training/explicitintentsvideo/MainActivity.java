@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btnAct3 = findViewById(R.id.btnAct3);
         tvResults = findViewById(R.id.tvResults);
 
+
+
         btnAct2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String name = etName.getText().toString().trim();
 
-                    Intent intent = new Intent(MainActivity.this,
-                            com.edureka.training.explicitintentsvideo.Activity2.class);
+                    Intent intent = new Intent(MainActivity.this, Activity2.class);
+
                     intent.putExtra("name", name);
                     startActivity(intent);
                 }
@@ -53,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         btnAct3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,
-                        com.edureka.training.explicitintentsvideo.Activity3.class);
+                Intent intent = new Intent(MainActivity.this, Activity3.class);
+
                 startActivityForResult(intent,ACTIVITY3);
             }
         });

@@ -20,9 +20,9 @@ public class Activity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        etSurname.findViewById(R.id.etSurname);
-        btnSubmit.findViewById(R.id.btnSubmit);
-        btnCancel.findViewById(R.id.btnCancel);
+        etSurname = findViewById(R.id.etSurname);
+        btnSubmit = findViewById(R.id.btnSubmit);
+        btnCancel = findViewById(R.id.btnCancel);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
